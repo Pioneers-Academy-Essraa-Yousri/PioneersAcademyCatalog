@@ -823,7 +823,7 @@
           'أنشطة وخرائط تفاعلية',
           'مراجعة ختامية لكل وحدة'
         ],
-        videoUrl: ''
+        videoUrl: 'videos/Mr Islam Study.mp4'
       },
       {
         id: 'math-games-foundation', category: 'foundation',
@@ -856,7 +856,8 @@
           'قواعد مبسطة بالأمثلة',
           'أنشطة وألعاب تفاعلية'
         ],
-        videoUrl: ''
+        videoUrl: 'Videos/Miss Maha Frensh.mp4'
+
       },
       {
         id: 'german', category: 'languages',
@@ -893,7 +894,7 @@
           '3 ألعاب: Memory Match، Drag & Sort، Speed Challenge',
           'كويز نهائي بنتيجة فورية'
         ],
-        videoUrl: ''
+        videoUrl: 'Videos/Miss reham English.mp4'
       },
       {
         id: 'close-up', category: 'english',
@@ -933,7 +934,7 @@
           'تمارين تفاعلية متدرجة',
           'اختبارات تقييمية دورية'
         ],
-        videoUrl: ''
+        videoUrl: 'Videos/Mr ahmed Arabic.mp4'
       },
       {
         id: 'math', category: 'math',
@@ -1076,7 +1077,7 @@
       let videoBlock = '';
       if (!c.comingSoon) {
         videoBlock = c.videoUrl
-          ? `<div class="video-box"><div class="video-inner"><iframe style="width:100%;height:140px;border:0;border-radius:4px" src="${c.videoUrl}" allowfullscreen></iframe></div></div>`
+          ? `<div class="video-box"><div class="video-inner"><video style="width:100%;height:100%;border:0;border-radius:4px;" src="${c.videoUrl}" controls></video></div></div>`
           : `<div class="video-box"><div class="video-inner"><div class="play">🎬</div><small>فيديو من المدرس — هيتم إضافته قريبًا</small></div></div>`;
       }
 
