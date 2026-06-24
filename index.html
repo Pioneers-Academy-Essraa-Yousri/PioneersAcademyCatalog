@@ -823,7 +823,7 @@
           'أنشطة وخرائط تفاعلية',
           'مراجعة ختامية لكل وحدة'
         ],
-        videoUrl: 'videos/Mr Islam Study.mp4'
+        videoUrl: 'https://drive.google.com/file/d/1h8oyhUnWYcxUii5dD57wILl341-sKQw5/view'
       },
       {
         id: 'math-games-foundation', category: 'foundation',
@@ -856,7 +856,7 @@
           'قواعد مبسطة بالأمثلة',
           'أنشطة وألعاب تفاعلية'
         ],
-        videoUrl: 'Videos/Miss Maha Frensh.mp4'
+        videoUrl: 'https://drive.google.com/file/d/1uTQKug-uxlgv-BteoerwAKJPOfHU8-aX/view'
 
       },
       {
@@ -894,7 +894,7 @@
           '3 ألعاب: Memory Match، Drag & Sort، Speed Challenge',
           'كويز نهائي بنتيجة فورية'
         ],
-        videoUrl: 'Videos/Miss reham English.mp4'
+        videoUrl: 'https://drive.google.com/file/d/1YsPup112EVInbzpkjQ_i_Es_e9A7pspi/view'
       },
       {
         id: 'close-up', category: 'english',
@@ -934,7 +934,7 @@
           'تمارين تفاعلية متدرجة',
           'اختبارات تقييمية دورية'
         ],
-        videoUrl: 'Videos/Mr ahmed Arabic.mp4'
+        videoUrl: 'https://drive.google.com/file/d/1EYYQSoku2DOop7ygDKGyzAny1bgEtEXJ/view'
       },
       {
         id: 'math', category: 'math',
@@ -1076,8 +1076,11 @@
 
       let videoBlock = '';
       if (!c.comingSoon) {
-        videoBlock = c.videoUrl
-          ? `<div class="video-box"><div class="video-inner"><video style="width:100%;height:100%;border:0;border-radius:4px;" src="${c.videoUrl}" controls></video></div></div>`
+        // This automatically changes /view to /preview for Google Drive links
+        let fixedUrl = c.videoUrl ? c.videoUrl.replace('/view', '/preview').replace('?usp=sharing', '') : '';
+
+        videoBlock = fixedUrl
+          ? `<div class="video-box"><div class="video-inner"><iframe style="width:250px;height:250px; border-radius:4px" src="${fixedUrl}" allow="autoplay" allowfullscreen></iframe></div></div>`
           : `<div class="video-box"><div class="video-inner"><div class="play">🎬</div><small>فيديو من المدرس — هيتم إضافته قريبًا</small></div></div>`;
       }
 
